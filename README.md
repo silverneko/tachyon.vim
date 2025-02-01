@@ -1,6 +1,7 @@
-# Raider.vim
+# Tachyon.vim
 
-A Vim colour scheme for archaeological escapades.
+Inspired by @axvr [raider](https://github.com/axvr/raider.vim) and
+[photon](https://github.com/axvr/photon.vim) theme.
 
 ![](https://raw.githubusercontent.com/axvr/raider.vim/ae8e48395b70a518824fb29c84ab8a2d6dddc01f/raider2.png)
 
@@ -12,7 +13,7 @@ following lines in your Vim configuration.
 
 ```vim
 set termguicolors
-colorscheme raider
+colorscheme tachyon
 ```
 
 > [!NOTE]

@@ -1,9 +1,9 @@
-Full name:   Raider
-Short name:  raider
-Author:      Alex Vear <alex@vear.uk>
-Description: A Vim colour scheme for archaeological escapades.
+Full name:   Tachyon
+Short name:  tachyon
+Author:      Sugoi Yo
+Description: A muted Vim colorscheme.
 License:     CC0 (Public domain)
-URL:         https://github.com/axvr/raider.vim
+URL:         https://github.com/silverneko/tachyon.vim
 
 
 ;;; Colour palette.
@@ -12,14 +12,17 @@ Neovim:     yes
 Variant:    gui 256
 Background: dark
 
-Color: void      #1a1a1a ~  ; Darkest background.
-Color: shadows   #222222 ~  ; Background.
-Color: shade     #2a2a2a ~  ; Lighter background.
-Color: hidden    #343434 ~  ; Invisible.
-Color: gun_metal #707070 ~  ; Faded forground.
-Color: snow      #c9c9c9 ~  ; Foreground.
+Color: void      #1a1a1a 234  ; Darkest background.
+Color: shadows   #222222 235  ; Background.
+Color: shade     #303030 236  ; Lighter background.
+Color: hidden    #343434 237  ; Invisible.
+Color: gun_metal #707070 242  ; Faded forground.
+Color: gray      #9e9e9e 247
+Color: snow      #c9c9c9 251  ; Foreground.
+Color: grape     #4c3743 96
 
 Color: top       #94baca ~  ; Teal.
+Color: mint      #d6ebc7 ~  ; Minty green.
 Color: shorts    #a79180 ~  ; Light yellowish-brown.
 Color: boots     #88766f ~  ; Light redish-brown.
 Color: snow_jacket #f0955f ~  ; Orange.
@@ -29,6 +32,8 @@ Color: moss      #96a8a1 ~  ; Pale greenish-teal.
 Color: slate     #858ca6 ~  ; Purplish-blue.
 Color: blood     #cf4c4c ~  ; Red.
 Color: gold      #ecb55d ~  ; Yellow.
+Color: yellow    #ffb700 ~
+Color: orange    #FFA066 ~
 
 Color: term_b_blue    #3465a4 ~
 Color: term_b_green   #2bb469 ~
@@ -40,52 +45,50 @@ Color: term_magenta   #c061cb ~
 
 Normal snow shadows
 
-Comment gun_metal none
-SpecialComment gun_metal none bold
+Comment gun_metal none italic
+SpecialComment mint none italic
+Todo mint none bold,italic
 
-Delimiter -> Comment
-
-NonText hidden none
+NonText gun_metal none
 Conceal -> NonText
-EndOfBuffer -> NonText
 Ignore -> NonText
 
-Constant boots none
+Constant mint none
 Character -> Constant
 Number -> Constant
 Float -> Number
 Boolean -> Constant
+String -> Constant
 
-String top none
-
-Identifier moss none
+Identifier -> Normal
 Function -> Identifier
-Operator -> Normal
 
-Statement shorts none
+Statement gray none
 Conditional -> Statement
 Repeat -> Conditional
-Label boots none
-Exception snow_jacket none
+Label shorts none
+Exception -> Statement
+Keyword -> Statement
 
-Keyword slate none
-
-PreProc boots none
+PreProc shorts none
 Include -> PreProc
 PreCondit -> PreProc
-Define shorts none
-Macro -> Define
+Define -> PreProc
+Macro -> PreProc
 
 Type slate none
-StorageClass -> Comment
 Structure -> Type
 Typedef -> Type
+StorageClass moss none
 
-Special gun_metal none
+Special moss none
 SpecialChar -> Special
 SpecialKey -> Special
-Tag gun_metal none italic
-Debug -> Exception
+Tag -> Special
+Debug -> Special
+
+Delimiter -> Special
+Operator -> Special
 
 ErrorMsg blood none bold
 Error -> ErrorMsg
@@ -95,8 +98,6 @@ Warning -> WarningMsg
 ModeMsg top none
 MoreMsg -> ModeMsg
 Question -> ModeMsg
-
-Todo leaves none bold
 Underlined top none underline
 
 StatusLine shorts hidden
@@ -114,44 +115,65 @@ WinSeparator -> VertSplit
 NormalFloat snow shade
 FloatBorder -> WinSeparator
 
-Title shorts none bold
+Title snow_jacket none bold
 
 LineNr gun_metal none
 LineNrAbove -> LineNr
 LineNrBelow -> LineNr
 Cursor shadows snow
 CursorLine none shade
-CursorLineNr gold shade
+CursorLineNr gold none
 CursorColumn -> CursorLine
-ColorColumn none void
+ColorColumn -> CursorLine
 SignColumn gun_metal none
+EndOfBuffer gun_metal void
 
-Visual none hidden
-VisualNOS none hidden
+Visual none grape
+VisualNOS none grape
 
-Pmenu none shade
-PmenuSbar none hidden
-PmenuSel gold hidden
+Pmenu none hidden
+PmenuMatch top none bold
+PmenuKind mint hidden
+PmenuExtra gray hidden
+PmenuSel void mint bold
+PmenuKindSel -> PmenuSel
+PmenuExtraSel -> PmenuSel
+PmenuSbar -> Pmenu
 PmenuThumb none gun_metal
 
 FoldColumn shade none
 Folded gun_metal void
 
 IncSearch shadows gold
-Search shadows top
+Search shadows gray
 CurSearch -> IncSearch
 Directory top none
-MatchParen gold shade bold
 
-SpellBad blood none underline
-SpellCap snow_jacket none underline
-SpellLocal -> SpellCap
-SpellRare gold none underline
+Sneak -> IncSearch
+SneakLabel -> IncSearch
+SneakScope -> DiffText
+
+MatchParen gold none bold
+MatchParenCur -> MatchParen
+MatchWord none none underline
+MatchWordCur -> MatchWord
+
+StartifySection -> Title
+StartifyFile -> Normal
+StartifyPath -> Normal
+
+SignatureMarkText -> DiffText
+SignatureMarkerText -> DiffText
+
+SpellBad none none underline
+SpellCap -> SpellBad
+SpellLocal -> SpellBad
+SpellRare -> SpellBad
 
 QuickFixLine none void
 
 DiffAdd leaves shade
-DiffChange none shade
+DiffChange top shade
 DiffDelete blood shade
 DiffText gold shade
 diffAdded -> DiffAdd
@@ -159,6 +181,10 @@ diffRemoved -> DiffDelete
 Added -> DiffAdd
 Changed -> DiffText
 Removed -> DiffDelete
+
+InlayHints -> LineNr
+LspInlayHintsParam -> InlayHints
+LspInlayHintsType -> InlayHints
 
 DiagnosticError blood none bold
 DiagnosticUnderlineError blood none underline
