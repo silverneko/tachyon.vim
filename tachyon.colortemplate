@@ -129,7 +129,7 @@ SignColumn gun_metal none
 EndOfBuffer gun_metal void
 
 Visual none grape
-VisualNOS none grape
+VisualNOS -> Visual
 
 Pmenu none hidden
 PmenuMatch top none bold
@@ -149,8 +149,8 @@ Search shadows gray
 CurSearch -> IncSearch
 Directory top none
 
-Sneak -> IncSearch
-SneakLabel -> IncSearch
+Sneak shadows gold bold
+SneakLabel -> Sneak
 SneakScope -> DiffText
 
 MatchParen gold none bold
@@ -202,8 +202,9 @@ DiagnosticUnnecessary gun_metal none bold
 helpHyperTextJump top none
 htmlTag -> Delimiter
 htmlEndTag -> htmlTag
-gitcommitSummary -> Title
+gitcommitSummary top none bold
 vimCommentTitle -> SpecialComment
+helpExample -> Special
 
 
 ;;; Integrated terminal colours.
