@@ -14,8 +14,8 @@ Background: dark
 
 Color: void      #1a1a1a 234  ; Darkest background.
 Color: shadows   #222222 235  ; Background.
-Color: shade     #303030 236  ; Lighter background.
-Color: hidden    #343434 237  ; Invisible.
+Color: shade     #2c2c2c 236  ; Lighter background.
+Color: hidden    #363636 237  ; Invisible.
 Color: gun_metal #707070 242  ; Faded forground.
 Color: gray      #9e9e9e 247
 Color: snow      #c9c9c9 251  ; Foreground.
@@ -132,7 +132,7 @@ Visual none grape
 VisualNOS -> Visual
 
 Pmenu none hidden
-PmenuMatch top none bold
+PmenuMatch top hidden bold
 PmenuKind mint hidden
 PmenuExtra gray hidden
 PmenuSel void mint bold

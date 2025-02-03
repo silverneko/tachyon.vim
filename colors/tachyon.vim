@@ -17,10 +17,10 @@ let s:t_Co = has('gui_running') ? -1 : get(g:, 'tachyon_t_Co', get(g:, 't_Co', e
 let s:italics = has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32'))
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-  let g:terminal_ansi_colors = ['#303030', '#cf4c4c', '#679d80', '#a79180', '#94baca', '#c061cb', '#858ca6', '#c9c9c9', '#707070', '#88766f', '#2bb469', '#ecb55d', '#3465a4', '#75507b', '#96a8a1', '#c9c9c9']
+  let g:terminal_ansi_colors = ['#2c2c2c', '#cf4c4c', '#679d80', '#a79180', '#94baca', '#c061cb', '#858ca6', '#c9c9c9', '#707070', '#88766f', '#2bb469', '#ecb55d', '#3465a4', '#75507b', '#96a8a1', '#c9c9c9']
 endif
 if has('nvim')
-  let g:terminal_color_0 = '#303030'
+  let g:terminal_color_0 = '#2c2c2c'
   let g:terminal_color_1 = '#cf4c4c'
   let g:terminal_color_2 = '#679d80'
   let g:terminal_color_3 = '#a79180'
@@ -82,24 +82,24 @@ hi ModeMsg guifg=#94baca guibg=NONE gui=NONE cterm=NONE
 hi! link MoreMsg ModeMsg
 hi! link Question ModeMsg
 hi Underlined guifg=#94baca guibg=NONE gui=underline cterm=underline
-hi StatusLine guifg=#a79180 guibg=#343434 gui=NONE cterm=NONE
-hi StatusLineNC guifg=#707070 guibg=#303030 gui=NONE cterm=NONE
+hi StatusLine guifg=#a79180 guibg=#363636 gui=NONE cterm=NONE
+hi StatusLineNC guifg=#707070 guibg=#2c2c2c gui=NONE cterm=NONE
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
 hi! link TabLine StatusLineNC
 hi! link TabLineFill StatusLineNC
 hi! link TabLineSel StatusLine
-hi WildMenu guifg=#ecb55d guibg=#303030 gui=NONE cterm=NONE
+hi WildMenu guifg=#ecb55d guibg=#2c2c2c gui=NONE cterm=NONE
 hi VertSplit guifg=#707070 guibg=NONE gui=NONE cterm=NONE
 hi! link WinSeparator VertSplit
-hi NormalFloat guifg=#c9c9c9 guibg=#303030 gui=NONE cterm=NONE
+hi NormalFloat guifg=#c9c9c9 guibg=#2c2c2c gui=NONE cterm=NONE
 hi! link FloatBorder WinSeparator
 hi Title guifg=#f0955f guibg=NONE gui=bold cterm=bold
 hi LineNr guifg=#707070 guibg=NONE gui=NONE cterm=NONE
 hi! link LineNrAbove LineNr
 hi! link LineNrBelow LineNr
 hi Cursor guifg=#222222 guibg=#c9c9c9 gui=NONE cterm=NONE
-hi CursorLine guifg=NONE guibg=#303030 gui=NONE cterm=NONE
+hi CursorLine guifg=NONE guibg=#2c2c2c gui=NONE cterm=NONE
 hi CursorLineNr guifg=#ecb55d guibg=NONE gui=NONE cterm=NONE
 hi! link CursorColumn CursorLine
 hi! link ColorColumn CursorLine
@@ -107,16 +107,16 @@ hi SignColumn guifg=#707070 guibg=NONE gui=NONE cterm=NONE
 hi EndOfBuffer guifg=#707070 guibg=#1a1a1a gui=NONE cterm=NONE
 hi Visual guifg=NONE guibg=#4c3743 gui=NONE cterm=NONE
 hi! link VisualNOS Visual
-hi Pmenu guifg=NONE guibg=#343434 gui=NONE cterm=NONE
-hi PmenuMatch guifg=#94baca guibg=NONE gui=bold cterm=bold
-hi PmenuKind guifg=#d6ebc7 guibg=#343434 gui=NONE cterm=NONE
-hi PmenuExtra guifg=#9e9e9e guibg=#343434 gui=NONE cterm=NONE
+hi Pmenu guifg=NONE guibg=#363636 gui=NONE cterm=NONE
+hi PmenuMatch guifg=#94baca guibg=#363636 gui=bold cterm=bold
+hi PmenuKind guifg=#d6ebc7 guibg=#363636 gui=NONE cterm=NONE
+hi PmenuExtra guifg=#9e9e9e guibg=#363636 gui=NONE cterm=NONE
 hi PmenuSel guifg=#1a1a1a guibg=#d6ebc7 gui=bold cterm=bold
 hi! link PmenuKindSel PmenuSel
 hi! link PmenuExtraSel PmenuSel
 hi! link PmenuSbar Pmenu
 hi PmenuThumb guifg=NONE guibg=#707070 gui=NONE cterm=NONE
-hi FoldColumn guifg=#303030 guibg=NONE gui=NONE cterm=NONE
+hi FoldColumn guifg=#2c2c2c guibg=NONE gui=NONE cterm=NONE
 hi Folded guifg=#707070 guibg=#1a1a1a gui=NONE cterm=NONE
 hi IncSearch guifg=#222222 guibg=#ecb55d gui=NONE cterm=NONE
 hi Search guifg=#222222 guibg=#9e9e9e gui=NONE cterm=NONE
@@ -139,10 +139,10 @@ hi! link SpellCap SpellBad
 hi! link SpellLocal SpellBad
 hi! link SpellRare SpellBad
 hi QuickFixLine guifg=NONE guibg=#1a1a1a gui=NONE cterm=NONE
-hi DiffAdd guifg=#679d80 guibg=#303030 gui=NONE cterm=NONE
-hi DiffChange guifg=#94baca guibg=#303030 gui=NONE cterm=NONE
-hi DiffDelete guifg=#cf4c4c guibg=#303030 gui=NONE cterm=NONE
-hi DiffText guifg=#ecb55d guibg=#303030 gui=NONE cterm=NONE
+hi DiffAdd guifg=#679d80 guibg=#2c2c2c gui=NONE cterm=NONE
+hi DiffChange guifg=#94baca guibg=#2c2c2c gui=NONE cterm=NONE
+hi DiffDelete guifg=#cf4c4c guibg=#2c2c2c gui=NONE cterm=NONE
+hi DiffText guifg=#ecb55d guibg=#2c2c2c gui=NONE cterm=NONE
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 hi! link Added DiffAdd
@@ -247,7 +247,7 @@ if s:t_Co >= 256
   hi Visual ctermfg=NONE ctermbg=96 cterm=NONE
   hi! link VisualNOS Visual
   hi Pmenu ctermfg=NONE ctermbg=237 cterm=NONE
-  hi PmenuMatch ctermfg=109 ctermbg=NONE cterm=bold
+  hi PmenuMatch ctermfg=109 ctermbg=237 cterm=bold
   hi PmenuKind ctermfg=194 ctermbg=237 cterm=NONE
   hi PmenuExtra ctermfg=247 ctermbg=237 cterm=NONE
   hi PmenuSel ctermfg=234 ctermbg=194 cterm=bold
@@ -320,8 +320,8 @@ endif
 " Background: dark
 " Color: void      #1a1a1a 234  ; Darkest background.
 " Color: shadows   #222222 235  ; Background.
-" Color: shade     #303030 236  ; Lighter background.
-" Color: hidden    #343434 237  ; Invisible.
+" Color: shade     #2c2c2c 236  ; Lighter background.
+" Color: hidden    #363636 237  ; Invisible.
 " Color: gun_metal #707070 242  ; Faded forground.
 " Color: gray      #9e9e9e 247
 " Color: snow      #c9c9c9 251  ; Foreground.
