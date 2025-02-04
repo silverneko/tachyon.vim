@@ -149,7 +149,8 @@ Search shadows gray
 CurSearch -> IncSearch
 Directory top none
 
-Sneak shadows gold bold
+SneakCurrent -> CurSearch
+Sneak none grape bold
 SneakLabel -> Sneak
 SneakScope -> DiffText
 
