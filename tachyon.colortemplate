@@ -206,6 +206,7 @@ htmlEndTag -> htmlTag
 gitcommitSummary top none bold
 vimCommentTitle -> SpecialComment
 helpExample -> Special
+typescriptFuncCallArg -> none
 
 
 ;;; Integrated terminal colours.

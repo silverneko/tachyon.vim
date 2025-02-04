@@ -170,6 +170,7 @@ hi! link htmlEndTag htmlTag
 hi gitcommitSummary guifg=#94baca guibg=NONE gui=bold cterm=bold
 hi! link vimCommentTitle SpecialComment
 hi! link helpExample Special
+hi! link typescriptFuncCallArg none
 if !s:italics
   hi Comment gui=NONE cterm=NONE
   hi SpecialComment gui=NONE cterm=NONE
@@ -310,6 +311,7 @@ if s:t_Co >= 256
   hi gitcommitSummary ctermfg=109 ctermbg=NONE cterm=bold
   hi! link vimCommentTitle SpecialComment
   hi! link helpExample Special
+  hi! link typescriptFuncCallArg none
   if !s:italics
     hi Comment cterm=NONE
     hi SpecialComment cterm=NONE
