@@ -70,7 +70,7 @@ Label shorts none
 Exception -> Statement
 Keyword -> Statement
 
-PreProc shorts none
+PreProc moss none
 Include -> PreProc
 PreCondit -> PreProc
 Define -> PreProc
@@ -79,7 +79,7 @@ Macro -> PreProc
 Type slate none
 Structure -> Type
 Typedef -> Type
-StorageClass moss none
+StorageClass shorts none
 
 Special moss none
 SpecialChar -> Special
@@ -100,7 +100,7 @@ MoreMsg -> ModeMsg
 Question -> ModeMsg
 Underlined top none underline
 
-StatusLine shorts hidden
+StatusLine gray shade
 StatusLineNC gun_metal shade
 StatusLineTerm -> StatusLine
 StatusLineTermNC -> StatusLineNC
